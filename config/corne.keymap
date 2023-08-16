@@ -9,48 +9,29 @@
 #include <dt-bindings/zmk/bt.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-
-                default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
-                        bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
-                        >;
-                };
-                lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
-                        >;
-                };
-
-                raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
-                        bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
-                        >;
-                };
+    keymap {
+      compatible = "zmk,keymap";
+  layer0 {
+          bindings = <
+          &kp F20 &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp F20 &kp F20 &mt LEFT_SHIFT A &mt LEFT_CONTROL S &mt LEFT_ALT D &mt LEFT_GUI F &kp G &kp H RGUI_T(KC_J) RALT_T(KC_K) RCTL_T(KC_L) RSFT_T(KC_SCLN) &kp F20 &kp LEFT_ALT &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp SLASH &kp F20 &lt 2 TAB &lt 1 ESCAPE &lt 3 ENTER &kp SPACE &kp BACKSPACE &lt 4 DELETE
+          >;
+        };layer1 {
+          bindings = <
+          &kp F20 &kp F20 &kp F10 &kp F9 &kp F8 &kp F7 &kp LG(C) &kp LG(Z) &kp F20 &kp F20 &kp LG(V) &kp F20 &kp F20 &kp LEFT_SHIFT &kp F11 &kp F6 &kp F5 &kp F4 &kp LEFT &kp DOWN &kp UP &kp RIGHT &kp F20 &kp F20 &kp F20 &kp F20 &kp F12 &kp F3 &kp F2 &kp F1 &kp PRINTSCREEN &kp F20 &kp LG(LEFT) &kp LG(RIGHT) &kp F20 &kp F20 &trans &trans &trans &kp ENTER &kp BACKSPACE &kp DELETE
+          >;
+        };layer2 {
+          bindings = <
+          &kp F20 &kp F20 &kp F20 KC_PERC &kp KP_MINUS KC_PLUS &kp N7 &kp N8 &kp N9 &kp N0 KC_CIRC &kp F20 &kp F20 &kp LEFT_SHIFT &kp F20 KC_CIRC &kp KP_SLASH KC_ASTR &kp N4 &kp N5 &kp N6 &kp COMMA &kp BACKSPACE &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp N1 &kp N2 &kp N3 &kp DOT &kp F20 &kp F20 &kp F20 &kp F20 &kp LEFT_ALT &kp EQUAL &kp BACKSPACE &kp DELETE
+          >;
+        };layer3 {
+          bindings = <
+          &kp F20 KC_CIRC &kp GRAVE KC_LCBR KC_RCBR KC_TILD KC_AMPR KC_PIPE &kp KP_MINUS KC_PLUS &kp BACKSLASH &kp F20 &kp F20 KC_LPRN KC_RPRN &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp SINGLE_QUOTE KC_DQUO &kp KP_SLASH KC_UNDS KC_ASTR &kp BACKSPACE &kp F20 &kp F20 KC_PERC KC_DLR KC_HASH KC_AT &kp F20 KC_EXLM KC_COLN KC_LT KC_GT KC_QUES &kp F20 &kp F20 &kp F20 &kp F20 &kp EQUAL &kp BACKSPACE &kp DELETE
+          >;
+        };layer4 {
+          bindings = <
+          RGB_TOG BL_TOGG BL_STEP BL_BRTG BL_ON BL_OFF &kp F20 RGB_M_B RGB_M_R RGB_M_SW RGB_M_SN RGB_M_K RGB_MOD RGB_HUI RGB_SAI RGB_VAI RGB_SPI BL_UP &kp F20 RGB_M_X RGB_M_G RGB_M_P RGB_M_T &trans RGB_RMOD RGB_HUD RGB_SAD RGB_VAD RGB_SPD BL_DOWN &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &trans &trans
+          >;
         };
-};
+    };
+  };
+  
