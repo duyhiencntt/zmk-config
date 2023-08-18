@@ -17,10 +17,10 @@
     behaviors {
         /*
         * Homerow Mods: Cross-hand Example
-        
-        lh_pht: left_hand_positional_hold_tap {
+       */ 
+        hm: left_hand_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "LEFT_POSITIONAL_HOLD_TAP";
+            label = "HOMEROW_MODS_CROSS_HAND";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
             tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
@@ -28,7 +28,7 @@
             bindings = <&kp>, <&kp>;
             // hold-trigger-key-positions = <5 6 7 8 9 10>;    // <---[[right-hand keys]]
         };
-*/
+
         /*
         * Homerow Mods: Tap-Preferred Example
         
@@ -44,7 +44,7 @@
 */
         /*
         * Homerow Mods: Balanced Example
-        */
+        
         hm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "BALANCE_HOMEROW_MODS";
@@ -55,7 +55,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
+*/
     keymap {
         compatible = "zmk,keymap";
 
