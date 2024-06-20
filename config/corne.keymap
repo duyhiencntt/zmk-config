@@ -14,6 +14,8 @@
 };
  */
 
+&lt { quick-tap-ms = <100>; };
+
 / {
     behaviors {
         /*
@@ -39,7 +41,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <0>;
+            quick-tap-ms = <100>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
@@ -87,10 +89,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LG(TAB)       &kp LA(TAB)       &kp LS(F3)        &kp F3       &none        &kp LG(LS(C))    &kp LG(Z)  &kp HOME     &kp END        &kp CAPSLOCK  &kp LS(LG(NUMBER_3))
-&trans  &kp LSHFT         &kp LC(UP_ARROW)  &kp LG(LEFT_ALT)  &kp LG(F)    &kp LC(H)    &kp LEFT         &kp DOWN   &kp UP       &kp RIGHT      &kp RSHIFT    &kp LS(LG(NUMBER_4))
-&trans  &kp LEFT_CONTROL  &kp K_CUT         &kp K_COPY        &kp K_PASTE  &kp F13      &kp PRINTSCREEN  &trans     &kp PAGE_UP  &kp PAGE_DOWN  &trans        &kp LS(LG(NUMBER_5))
-                                            &trans            &trans       &trans       &trans           &trans     &trans
+&trans  &kp LG(TAB)       &kp LA(TAB)  &kp LS(F3)        &kp F3       &none        &kp LG(LS(C))    &kp LG(Z)  &kp HOME     &kp END        &kp CAPSLOCK  &kp LS(LG(NUMBER_3))
+&trans  &kp LSHFT         &kp LCTRL    &kp LG(LEFT_ALT)  &kp LG(F)    &kp LC(H)    &kp LEFT         &kp DOWN   &kp UP       &kp RIGHT      &kp RSHIFT    &kp LS(LG(NUMBER_4))
+&trans  &kp LEFT_CONTROL  &kp K_CUT    &kp K_COPY        &kp K_PASTE  &kp F13      &kp PRINTSCREEN  &trans     &kp PAGE_UP  &kp PAGE_DOWN  &trans        &kp LS(LG(NUMBER_5))
+                                       &trans            &trans       &trans       &trans           &trans     &trans
             >;
 
             label = "Navigation";
