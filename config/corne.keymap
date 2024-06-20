@@ -38,7 +38,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <400>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
@@ -87,10 +87,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LG(TAB)       &kp LA(TAB)       &kp LS(F3)          &kp F3     &none        &kp LG(LS(C))    &kp LG(Z)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp CAPSLOCK  &kp LS(LG(NUMBER_3))
-&trans  &kp LSHFT         &kp LC(UP_ARROW)  &kp LC(DOWN_ARROW)  &kp LG(F)  &kp LC(H)    &kp LEFT         &kp DOWN   &kp UP        &kp RIGHT      &kp RSHIFT    &kp LS(LG(NUMBER_4))
-&trans  &kp LEFT_CONTROL  &kp LG(X)         &kp LG(C)           &kp LG(V)  &kp F13      &kp PRINTSCREEN  &trans     &kp LG(LEFT)  &kp LG(RIGHT)  &trans        &kp LS(LG(NUMBER_5))
-                                            &trans              &trans     &trans       &trans           &trans     &trans
+&trans  &kp LG(TAB)       &kp LA(TAB)       &kp LS(F3)     &kp F3     &none        &kp LG(LS(C))    &kp LG(Z)  &kp LA(LEFT)  &kp LA(RIGHT)  &kp CAPSLOCK  &kp LS(LG(NUMBER_3))
+&trans  &kp LSHFT         &kp LC(UP_ARROW)  &kp LG(GRAVE)  &kp LG(F)  &kp LC(H)    &kp LEFT         &kp DOWN   &kp UP        &kp RIGHT      &kp RSHIFT    &kp LS(LG(NUMBER_4))
+&trans  &kp LEFT_CONTROL  &kp LG(X)         &kp LG(C)      &kp LG(V)  &kp F13      &kp PRINTSCREEN  &trans     &kp LG(LEFT)  &kp LG(RIGHT)  &trans        &kp LS(LG(NUMBER_5))
+                                            &trans         &trans     &trans       &trans           &trans     &trans
             >;
 
             label = "Navigation";
