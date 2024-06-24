@@ -84,10 +84,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp LG(GRAVE)   &kp LA(TAB)  &kp LS(F3)        &kp F3     &none        &kp LG(LS(C))    &kp LG(Z)  &kp HOME     &kp END        &kp CAPSLOCK  &kp LS(LG(NUMBER_3))
-&trans  &kp LEFT_SHIFT  &kp LG(S)    &kp LG(LEFT_ALT)  &kp LG(F)  &kp LC(H)    &kp LEFT         &kp DOWN   &kp UP       &kp RIGHT      &kp RSHIFT    &kp LS(LG(NUMBER_4))
-&trans  &kp LEFT_ALT    &kp LG(X)    &kp LG(C)         &kp LG(V)  &kp F13      &kp PRINTSCREEN  &trans     &kp PAGE_UP  &kp PAGE_DOWN  &trans        &kp LS(LG(NUMBER_5))
-                                     &trans            &trans     &trans       &trans           &mkp MB4   &mkp MB5
+&trans  &kp LG(GRAVE)   &kp LA(TAB)  &kp LS(F3)        &kp F3     &none        &kp LG(LS(C))      &kp LG(Z)  &kp HOME            &kp END     &kp CAPSLOCK  &kp LS(LG(NUMBER_3))
+&trans  &kp LEFT_SHIFT  &kp LG(S)    &kp LG(LEFT_ALT)  &kp LG(F)  &kp LC(H)    &kp LEFT           &kp DOWN   &kp UP              &kp RIGHT   &kp RSHIFT    &kp LS(LG(NUMBER_4))
+&trans  &kp LEFT_ALT    &kp LG(X)    &kp LG(C)         &kp LG(V)  &kp F13      &kp K_APPLICATION  &kp K_APP  &kp K_CONTEXT_MENU  &kp K_MENU  &trans        &kp LS(LG(NUMBER_5))
+                                     &trans            &trans     &trans       &trans             &mkp MB4   &mkp MB5
             >;
 
             label = "Navigation";
@@ -112,10 +112,10 @@
 
         symbol {
             bindings = <
-&trans  &kp GRAVE             &kp CARET              &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE           &kp AMPS           &kp PIPE       &kp KP_SUBTRACT  &kp PLUS          &kp BACKSLASH  &trans
-&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES  &kp KP_DIVIDE  &kp UNDER        &kp ASTERISK      &kp SEMICOLON  &trans
-&trans  &kp PERCENT           &kp DOLLAR             &kp HASH          &kp AT_SIGN        &kp QUESTION        &kp EXCLAMATION    &kp COLON      &kp LESS_THAN    &kp GREATER_THAN  &kp QUESTION   &trans
-                                                     &trans            &trans             &trans              &kp EQUAL          &trans         &trans
+&trans  &kp GRAVE             &kp CARET              &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp TILDE           &kp AMPS           &kp PIPE   &kp MINUS      &kp PLUS          &kp BACKSLASH  &trans
+&trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp SINGLE_QUOTE    &kp DOUBLE_QUOTES  &kp SLASH  &kp UNDER      &kp ASTERISK      &kp SEMICOLON  &trans
+&trans  &kp PERCENT           &kp DOLLAR             &kp NON_US_HASH   &kp AT_SIGN        &kp QUESTION        &kp EXCLAMATION    &kp COLON  &kp LESS_THAN  &kp GREATER_THAN  &kp QUESTION   &trans
+                                                     &trans            &trans             &trans              &kp EQUAL          &trans     &trans
             >;
 
             label = "Symbol";
