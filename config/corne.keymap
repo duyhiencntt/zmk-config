@@ -123,10 +123,10 @@
 
         systemAndMouse {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &bt BT_SEL 3  &bt BT_SEL 4         &kp K_STOP  &mkp LCLK       &kp C_PREVIOUS  &kp C_NEXT  &trans  &kp LS(LC(C_POWER))
-&bt BT_NXT  &trans        &trans        &kp C_BRIGHTNESS_INC  &kp K_MUTE    &kp C_VOLUME_UP      &trans      &mmv MOVE_DOWN  &trans          &trans      &trans  &kp LC(LG(Q))
-&bt BT_PRV  &trans        &trans        &kp C_BRIGHTNESS_DEC  &trans        &kp C_VOLUME_DOWN    &kp K_MUTE  &trans          &trans          &trans      &trans  &kp LA(LG(ESCAPE))
-                                        &trans                &trans        &trans               &trans      &trans          &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &kp C_VOLUME_UP      &kp C_VOLUME_UP    &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans  &kp LS(LC(C_POWER))
+&bt BT_NXT  &trans        &trans        &trans        &trans        &kp K_MUTE           &kp K_MUTE         &trans     &trans     &trans     &trans  &kp LC(LG(Q))
+&bt BT_PRV  &trans        &trans        &trans        &trans        &kp C_VOLUME_DOWN    &kp C_VOLUME_DOWN  &mkp MB4   &mkp MB5   &trans     &trans  &kp LA(LG(ESCAPE))
+                                        &trans        &trans        &trans               &trans             &trans     &trans
             >;
 
             label = "Sys & Mouse";
